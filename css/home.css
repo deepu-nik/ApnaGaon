@@ -1,0 +1,72 @@
+/* ============================================
+   HOME SECTION STYLES
+   ============================================ */
+
+/* Emergency Card */
+.emergency a {
+    text-decoration: none;
+    color: #d9381e;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 0;
+}
+
+/* Useful Info Card Styling */
+.info-card p {
+    margin: 8px 0;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #1b4d3e;
+    border-radius: 4px;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item p {
+    margin: 0;
+    padding: 8px;
+    font-size: 13px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 380px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

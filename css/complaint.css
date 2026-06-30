@@ -1,0 +1,73 @@
+/* ============================================
+   COMPLAINT SECTION STYLES
+   ============================================ */
+
+/* Complaints Dashboard Styling */
+.complaint-card {
+    background-color: #fff;
+    padding: 15px;
+    border-left: 5px solid #d9381e;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.complaint-card.resolved {
+    border-left-color: #28a745;
+}
+
+.complaint-card h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.complaint-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.complaint-category {
+    display: inline-block;
+    background: #ffeeba;
+    color: #856404;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-left: 6px;
+}
+
+.status-tag.pending {
+    background: #ffe0e0;
+    color: #b00020;
+}
+
+.status-tag.resolved {
+    background: #d4edda;
+    color: #1e7a34;
+}
+
+.complaint-card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#status-results .complaint-card {
+    margin-top: 15px;
+}

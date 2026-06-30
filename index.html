@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gram Panchayat Laxmipur Kaithwaliya</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/notices.css">
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <h1 data-en="Gram Panchayat Laxmipur Kaithwaliya" data-hi="ग्राम पंचायत लक्ष्मीपुर कैथवलिया">Gram Panchayat Laxmipur Kaithwaliya</h1>
+            <div class="header-actions">
+                <button id="lang-toggle-btn" class="lang-btn">हिंदी</button>
+                <button id="top-auth-btn" class="top-login-btn" data-en="Admin Login" data-hi="एडमिन लॉगिन">Admin Login</button>
+            </div>
+        </div>
+        <nav>
+            <button class="nav-btn active" data-section="home" data-en="Home" data-hi="होम">Home</button>
+            <button class="nav-btn" data-section="notices" data-en="Notices" data-hi="सूचनाएं">Notices</button>
+            <button class="nav-btn" data-section="complaint" data-en="Complain" data-hi="शिकायत">Complain</button>
+        </nav>
+    </header>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 style="margin-top: 0;" data-en="Authority Login" data-hi="अधिकारी लॉगिन">Authority Login</h3>
+            <p style="font-size: 14px; color: #555;" data-en="Enter the admin passcode to add notices and photos." data-hi="सूचनाएं और फ़ोटो जोड़ने के लिए एडमिन पासकोड दर्ज करें।">Enter the admin passcode to add notices and photos.</p>
+            <input type="password" id="auth-password" placeholder="Enter Passcode">
+            <button id="modal-login-btn" class="submit-btn" style="padding: 10px;" data-en="Unlock Admin Panel" data-hi="एडमिन पैनल अनलॉक करें">Unlock Admin Panel</button>
+            <p class="modal-note" data-en="Demo note: this is a simple passcode check for the project demo. A production version would use Firebase Authentication so the check is enforced on the server, not just in the browser." data-hi="डेमो नोट: यह प्रोजेक्ट डेमो के लिए एक साधारण पासकोड जांच है। प्रोडक्शन संस्करण में Firebase Authentication का उपयोग होगा।">Demo note: this is a simple passcode check for the project demo. A production version would use Firebase Authentication so the check is enforced on the server, not just in the browser.</p>
+        </div>
+    </div>
+
+    <section id="home" class="page-section active-section">
+        <div id="home-content"></div>
+    </section>
+
+    <section id="notices" class="page-section">
+        <div id="notices-content"></div>
+    </section>
+
+    <section id="complaint" class="page-section">
+        <div id="complaint-content"></div>
+    </section>
+
+    <footer>
+        <p data-en="Developed for people of Laxmipur Kaithwaliya." data-hi="लक्ष्मीपुर कैथवलिया के लोगों के लिए विकसित।">Developed for people of Laxmipur Kaithwaliya.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

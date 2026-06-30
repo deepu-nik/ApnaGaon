@@ -1,0 +1,47 @@
+<!-- COMPLAINT SECTION CONTENT -->
+<h2 data-en="Raise a Complaint" data-hi="शिकायत दर्ज करें">Raise a Complaint</h2>
+<p data-en="Send an issue directly to the Gram Pradhan." data-hi="ग्राम प्रधान को सीधे समस्या भेजें।">Send an issue directly to the Gram Pradhan.</p>
+
+<div class="card">
+    <form id="complaint-form">
+        <label for="name" data-en="Your Name:" data-hi="आपका नाम:">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="category" data-en="Issue Category:" data-hi="समस्या श्रेणी:">Issue Category:</label>
+        <select id="category" required>
+            <option value="">-- Select an Issue --</option>
+            <option value="water">Water Supply</option>
+            <option value="electricity">Street Lights / Power</option>
+            <option value="roads">Road Damage</option>
+            <option value="sanitation">Garbage / Sanitation</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="description" data-en="Describe the Issue:" data-hi="समस्या का विवरण दें:">Describe the Issue:</label>
+        <textarea id="description" rows="4" placeholder="Briefly explain the problem..." required></textarea>
+
+        <label for="photo" data-en="Upload Photo Evidence (Optional):" data-hi="फ़ोटो प्रमाण अपलोड करें (वैकल्पिक):">Upload Photo Evidence (Optional):</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <button type="submit" id="submit-complaint-btn" class="submit-btn" data-en="Submit Complaint" data-hi="शिकायत जमा करें">Submit Complaint</button>
+    </form>
+    <p id="upload-status" class="status-text" style="display: none;" data-en="Compressing image, please wait..." data-hi="फ़ोटो कंप्रेस हो रही है, कृपया प्रतीक्षा करें...">Compressing image, please wait...</p>
+    <p id="success-message" class="success-text" style="display: none;" data-en="Complaint Submitted Successfully!" data-hi="शिकायत सफलतापूर्वक जमा हुई!">Complaint Submitted Successfully!</p>
+</div>
+
+<div class="card">
+    <h3 data-en="🔍 Check Your Complaint Status" data-hi="🔍 अपनी शिकायत की स्थिति देखें">🔍 Check Your Complaint Status</h3>
+    <p style="font-size: 14px; color: #555;" data-en="Enter the name you used while submitting to see its status." data-hi="स्थिति देखने के लिए वही नाम दर्ज करें जो शिकायत करते समय दिया था।">Enter the name you used while submitting to see its status.</p>
+    <input type="text" id="check-name" placeholder="Enter your name">
+    <button id="check-status-btn" class="submit-btn" data-en="Check Status" data-hi="स्थिति देखें">Check Status</button>
+    <div id="status-results"></div>
+</div>
+
+<div id="admin-complaints-panel" class="admin-only" style="margin-top: 40px; border-top: 3px dashed #1b4d3e; padding-top: 20px;">
+    <h3 data-en="📋 Received Complaints (Admin View)" data-hi="📋 प्राप्त शिकायतें (एडमिन दृश्य)">📋 Received Complaints (Admin View)</h3>
+    <p style="font-size: 14px; color: #555;" data-en="These are the issues submitted by villagers. Only you can see this." data-hi="ये गांववालों द्वारा भेजी गई समस्याएं हैं। यह केवल आपको दिखाई देती है।">These are the issues submitted by villagers. Only you can see this.</p>
+
+    <div id="complaints-list">
+        <p data-en="Loading complaints..." data-hi="शिकायतें लोड हो रही हैं...">Loading complaints...</p>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+/* ============================================
+   NOTICES SECTION STYLES
+   ============================================ */
+
+.notice-card h4 {
+    margin: 0 0 5px 0;
+    color: #1b4d3e;
+}
+
+.notice-card small {
+    color: #666;
+}

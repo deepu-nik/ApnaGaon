@@ -1,0 +1,317 @@
+/* ============================================
+   MAIN / SHARED STYLES
+   ============================================ */
+
+/* Basic Setup with Village Theme */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef6ee;
+    background-image: linear-gradient(180deg, #dff0d8 0%, #eef6ee 200px);
+    background-attachment: scroll;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #d9690b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Header Layout for Top Right Login */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-top h1 {
+    margin: 0;
+    font-size: 22px;
+    text-align: left;
+    flex: 1 1 220px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.top-login-btn, .lang-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-login-btn:hover, .lang-btn:hover {
+    background-color: white;
+    color: #1b4d3e;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background-color: white;
+    color: #1b4d3e;
+    font-weight: bold;
+}
+
+/* Page Sections Visibility */
+.page-section {
+    display: none;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    min-height: 70vh;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.page-section.active-section {
+    display: block;
+}
+
+/* Common Card Styling */
+.card, .notice-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Form Styling */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: 3px solid #6fb5e0;
+    outline-offset: 1px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #1b4d3e;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #13362b;
+}
+
+.admin-btn {
+    background-color: #856404;
+}
+
+.admin-btn:hover {
+    background-color: #5f4703;
+}
+
+.delete-btn {
+    background-color: #d9381e;
+    padding: 8px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #a82c17;
+}
+
+.resolve-btn {
+    background-color: #28a745;
+}
+
+.resolve-btn:hover {
+    background-color: #1e7a34;
+}
+
+.status-text {
+    color: #1565c0;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.success-text {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Admin Elements */
+.admin-only {
+    display: none;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-note {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1b4d3e;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* Close 'X' Button */
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: black;
+}
+
+/* ============================== */
+/* MOBILE RESPONSIVENESS          */
+/* ============================== */
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-top h1 {
+        text-align: center;
+        font-size: 19px;
+        flex: 1 1 auto;
+    }
+
+    .header-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    .nav-btn {
+        flex: 1 1 auto;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .page-section {
+        margin: 12px auto;
+        padding: 15px;
+        border-radius: 8px;
+        max-width: 100%;
+    }
+
+    .card, .notice-card {
+        padding: 15px;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+        width: 85%;
+    }
+}
+
+@media (max-width: 380px) {
+    .header-top h1 {
+        font-size: 17px;
+    }
+}
